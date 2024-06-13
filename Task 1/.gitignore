@@ -1,0 +1,10 @@
+$ cat .gitignore
+.vs
+*.[oa]
+*~
+*.exe
+.idea
+.venv
+credentials
+sklearn-enva
+userData.txt
