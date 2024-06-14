@@ -7,3 +7,5 @@ $ cat .gitignore
 .venv
 credentials
 sklearn-enva
+dataset
+dataset.csv
