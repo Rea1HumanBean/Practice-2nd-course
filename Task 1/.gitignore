@@ -7,4 +7,3 @@ $ cat .gitignore
 .venv
 credentials
 sklearn-enva
-userData.txt
