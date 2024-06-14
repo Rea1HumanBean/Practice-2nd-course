@@ -9,3 +9,4 @@ credentials
 sklearn-enva
 dataset
 dataset.csv
+__pycache__
