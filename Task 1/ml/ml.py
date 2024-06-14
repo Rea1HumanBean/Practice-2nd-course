@@ -47,6 +47,12 @@ class EmotionalAnalysisComments:
 
         return predicted_emotions
 
+    def _print_emotion_comments(self, predicted_emotions: ml.np.array, labels: list) -> None:
+        for i, comment in enumerate(self._user_comments):
+            print(f"Comment: {comment}")
+            print("Predicted emotions:",
+                  {labels[j]: predicted_emotions[i][j] for j in range(len(labels))})
+
     def analysis_comments(self) -> None:
         self._tokenize_df()
         self._tokenize_user_comments()
@@ -56,10 +62,7 @@ class EmotionalAnalysisComments:
 
         predicted_emotions = self.create_and_predict_model(emotions)
 
-        for i, comment in enumerate(self._user_comments):
-            print(f"Comment: {comment}")
-            print("Predicted emotions:",
-                  {target_labels[j]: predicted_emotions[i][j] for j in range(len(target_labels))})
+        self._print_emotion_comments(predicted_emotions, target_labels)
 
 
 def main():
