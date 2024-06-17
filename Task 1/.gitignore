@@ -11,3 +11,6 @@ dataset
 dataset.csv
 __pycache__
 build
+main.spec
+credentials
+dist
